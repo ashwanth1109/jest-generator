@@ -7,8 +7,6 @@ class Parser {
     const minifiedCode = Parser.minifyCode(code);
     const importStatements = [];
 
-    console.log(minifiedCode);
-
     let letters: string[] = minifiedCode.split("");
 
     while (letters.length > 0) {
