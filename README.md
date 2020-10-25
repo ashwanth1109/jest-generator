@@ -14,12 +14,6 @@ Repo consists of:
 - Generate a basic template of success-failure tests for lambda
 - Deep mocking of dependencies used (if possible)
 
-## Notes:
-
-- Meant to be a starting point for the generated tests
-- May generate incorrectly or fail but any output will only be added to end of existing files and not overwrite them
-- You can remove the generated code if it doesn't and raise an issue with input and expected output (if possible), and I can work on improving the script
-
 ## Instructions for use:
 
 ### 1. Create your deployment env if you want to use your own S3 bucket to store your Deno script object
@@ -56,3 +50,29 @@ Function SpecGen($readFile, $writeFile) {
 
 Set-Alias spec-gen SpecGen
 ```
+
+### 5. You can now run the command with your alias
+
+Example usage:
+
+```
+spec-gen handler.ts handler.spec.ts
+```
+
+## Deploying changes to deno script to S3 bucket
+
+Run build (also cleans up previous dist):
+
+- `npm run build`
+
+Run deploy:
+
+- `npm run deploy`
+
+You should now be able to see your new deno script in your S3 bucket
+
+## Important Notes:
+
+- Meant to be a starting point for the generated test setup, you will then need to add on top of that
+- May generate incorrectly or fail but any output will only be added to end of existing files and not overwrite them
+- You can remove the generated code if it doesn't and raise an issue with input and expected output (if possible), and I can work on improving the script
