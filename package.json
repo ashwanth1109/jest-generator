@@ -9,7 +9,7 @@
     "deploy": "cd deploy && npm run deploy"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ashwanth A R",
   "license": "ISC",
   "devDependencies": {
     "@types/fs-extra": "^9.0.2",
